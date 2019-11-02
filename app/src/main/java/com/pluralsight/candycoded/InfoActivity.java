@@ -33,7 +33,7 @@ public class InfoActivity extends AppCompatActivity {
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, uriAddress);
         mapIntent.setPackage("com.google.android.apps.maps");
 
-        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+        if (mapIntent.resolveActivity(getPackageManager()) == null) {
             startActivity(mapIntent);
         }
 
